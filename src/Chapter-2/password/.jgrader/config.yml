@@ -1,0 +1,4 @@
+# These settings override default autograde settings for the course
+general:
+  display_name: 'Password check' # Mandatory
+  handin_filename: 'Password.java' # Mandatory

@@ -1,0 +1,5 @@
+{
+    "name": "Compilation",
+    "compileArgs": ["Taxes.java"],
+    "ifFailedSkipRest": true
+}
