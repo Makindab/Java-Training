@@ -1,37 +1,22 @@
-import java.util.Scanner;
-import java.util.Locale;
-
-public class AnimalSounds {
+class AnimalSounds {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        scan.useLocale(Locale.ENGLISH);
+        // Write your code here
+        var scan = new java.util.Scanner(System.in);
+        scan.useLocale(java.util.Locale.ENGLISH);
 
+        String animal;
         while (scan.hasNextLine()) {
-            String animal = scan.nextLine();
+            animal = scan.nextLine();
+
             switch (animal) {
-                case "Dog":
-                    System.out.println("Woof");
-                    break;
-                case "Cat":
-                    System.out.println("Meow");
-                    break;
-                case "Sheep":
-                    System.out.println("Baa");
-                    break;
-                case "Cow":
-                    System.out.println("Moo");
-                    break;
-                case "Lion":
-                    System.out.println("Roar");
-                    break;
-                case "Pig":
-                    System.out.println("Oink");
-                    break;
-                case "Duck":
-                    System.out.println("Quack");
-                    break;
-                default:
-                    System.out.println("?");
+                case "Dog" -> System.out.println("Woof");
+                case "Cat" -> System.out.println("Meow");
+                case "Sheep" -> System.out.println("Baa");
+                case "Cow" -> System.out.println("Moo");
+                case "Lion" -> System.out.println("Roar");
+                case "Pig" -> System.out.println("Oink");
+                case "Duck" -> System.out.println("Quack");
+                default -> System.out.println("?");
             }
         }
         scan.close();
