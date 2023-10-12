@@ -4,36 +4,32 @@ class Statistics {
         // Calculate Mean and Standard deviation
 
         double mean = Mean(values);
-        double standarddeviation = StandardDeviation(values);
+        double standarddeviation = StandardDeviation(values, mean);
         System.out.println(mean + "\n" + standarddeviation);
 
     }
 
     private static double Mean(int[] values) {
         double count = 0;
-        double mean = 0;
         int Vlength = values.length;
 
         for (int i : values) {
             count += i;
         }
-        mean = count / Vlength;
 
-        return mean;
+        return count / Vlength;
     }
 
-    private static double StandardDeviation(int[] values) {
-        double SquaredDifferenceSum = 0;
-        int Vlength = values.length;
-        double mean = Mean(values);
+    private static double StandardDeviation(int[] values, double mean) {
+        double squaredDifferenceSum = 0;
+        int vLength = values.length;
 
         for (int n : values) {
-            double SquaredDifference = Math.pow(n - mean, 2.0);
-            SquaredDifferenceSum += SquaredDifference;
+            double squaredDifference = Math.pow(n - mean, 2);
+            squaredDifferenceSum += squaredDifference;
         }
 
-        double StandardDeviation = Math.sqrt(SquaredDifferenceSum / (Vlength - 1));
-        return StandardDeviation;
+        return Math.sqrt(squaredDifferenceSum / (vLength - 1));
     }
 
     /**
