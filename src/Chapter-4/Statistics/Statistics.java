@@ -21,7 +21,7 @@ class Statistics {
     }
 
     private static double StandardDeviation(double[] values, double mean) {
-        double squaredDifferenceSum = 0.00000;
+        double squaredDifferenceSum = 0;
         int vLength = values.length;
 
         for (double n : values) {
