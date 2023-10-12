@@ -5,7 +5,7 @@ class Statistics {
 
         double mean = Mean(values);
         double standarddeviation = StandardDeviation(values, mean);
-        System.out.println(mean + "\n" + standarddeviation);
+        System.out.println("Mean: " + mean + "\nStandard deviation: " + standarddeviation);
 
     }
 
@@ -21,7 +21,7 @@ class Statistics {
     }
 
     private static double StandardDeviation(double[] values, double mean) {
-        double squaredDifferenceSum = 0;
+        double squaredDifferenceSum = 0.00000;
         int vLength = values.length;
 
         for (double n : values) {
@@ -29,7 +29,7 @@ class Statistics {
             squaredDifferenceSum += squaredDifference;
         }
 
-        return Math.sqrt(squaredDifferenceSum / (vLength - 1));
+        return Math.sqrt(squaredDifferenceSum / vLength );
     }
 
     /**
@@ -43,7 +43,7 @@ class Statistics {
         var input = scanner.nextLine();
         scanner.close();
 
-        var split = input.split(", ");
+        var split = input.split("; ");
         var values = new double[split.length];
         for (int i = 0; i < values.length; i++) {
             values[i] = Double.parseDouble(split[i]);
