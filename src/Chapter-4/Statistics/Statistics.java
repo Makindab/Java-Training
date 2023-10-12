@@ -9,22 +9,22 @@ class Statistics {
 
     }
 
-    private static double Mean(int[] values) {
+    private static double Mean(double[] values) {
         double count = 0;
         int Vlength = values.length;
 
-        for (int i : values) {
+        for (double i : values) {
             count += i;
         }
 
         return count / Vlength;
     }
 
-    private static double StandardDeviation(int[] values, double mean) {
+    private static double StandardDeviation(double[] values, double mean) {
         double squaredDifferenceSum = 0;
         int vLength = values.length;
 
-        for (int n : values) {
+        for (double n : values) {
             double squaredDifference = Math.pow(n - mean, 2);
             squaredDifferenceSum += squaredDifference;
         }
@@ -37,16 +37,16 @@ class Statistics {
      * 
      * @return an array of integers read from the console
      */
-    private static int[] parseInput() {
+    private static double[] parseInput() {
         var scanner = new java.util.Scanner(System.in);
         scanner.useLocale(java.util.Locale.ENGLISH);
         var input = scanner.nextLine();
         scanner.close();
 
         var split = input.split(", ");
-        var values = new int[split.length];
+        var values = new double[split.length];
         for (int i = 0; i < values.length; i++) {
-            values[i] = Integer.parseInt(split[i]);
+            values[i] = Double.parseDouble(split[i]);
         }
         return values;
     }
