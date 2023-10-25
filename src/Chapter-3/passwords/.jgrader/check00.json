@@ -1,5 +1,0 @@
-{
-    "name": "Compilation",
-    "compileArgs": ["Password.java"],
-    "ifFailedSkipRest": true
-}

@@ -2,13 +2,20 @@ class Evens {
     public static void main(String[] args) {
         var values = parseInput();
         // Write your code here
+
+        var count = countEvenNumbers(values);
+        System.out.println(count);
+
+    }
+
+    private static int countEvenNumbers(int[] values) {
         int count = 0;
         for (int value : values) {
             if (value % 2 == 0) {
                 count++;
             }
         }
-        System.out.println(count);
+        return count;
     }
 
     /**
