@@ -1,0 +1,4 @@
+# These settings override default autograde settings for the course
+general:
+  display_name: 'Conversion from seconds' # Mandatory
+  handin_filename: 'Conversion.java' # Mandatory

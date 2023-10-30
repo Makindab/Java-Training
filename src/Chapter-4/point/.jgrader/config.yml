@@ -1,0 +1,4 @@
+# These settings override default autograde settings for the course
+general:
+  display_name: 'Point' # Mandatory
+  handin_filename: 'Point.java' # Mandatory
