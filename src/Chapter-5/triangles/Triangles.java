@@ -12,7 +12,6 @@ class Triangles {
         var RadiansB = Math.acos((a * a + c * c - b * b) / (2 * a * c));
         var RadiansC = Math.acos((a * a + b * b - c * c) / (2 * a * b));
 
-
         var A = RadiansA * (180 / Math.PI);
         var B = RadiansB * (180 / Math.PI);
         var C = RadiansC * (180 / Math.PI);
@@ -25,6 +24,6 @@ class Triangles {
             System.out.println("Acute");
         } else if (A == 90 || B == 90 || C == 90) {
             System.out.println("Right");
+        }
     }
-}
 }
