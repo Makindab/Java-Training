@@ -1,5 +1,0 @@
-{
-    "name": "Compilation",
-    "compileArgs": ["Maximum.java"],
-    "ifFailedSkipRest": true
-}

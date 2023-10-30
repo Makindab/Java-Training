@@ -1,5 +1,0 @@
-{
-    "name": "Compilation",
-    "compileArgs": ["Conversion.java"],
-    "ifFailedSkipRest": true
-}
